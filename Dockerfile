@@ -14,6 +14,7 @@ RUN apk add --no-cache \
     git clone https://github.com/donwa/oneindex.git /var/www/html && \
     ssh-keygen -A
 
+EXPOSE 80
 # Persistent config file and cache
 VOLUME [ "/var/www/html/config", "/var/www/html/cache" ]
 ENTRYPOINT [ "/docker-entrypoint.sh" ]
